@@ -5,7 +5,7 @@ npm i
 
 npm start  or npm src/index.js
 
-route 
+ test the route  in postman
 
  signup 
 
