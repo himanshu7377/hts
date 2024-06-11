@@ -1,13 +1,15 @@
 const express = require('express');
-const router = express.Router();
 const {signin, signup} = require('../controllers/authController');
+const checkDuplicateEmail = require('../middleware/checkDuplicateEmail');
+const router = express.Router();
+
 
 
 
 // auth routes
 
-//  sign-up route
-router.post('/signup', signup);
+//  sign-up route with checkDuplicateEmail middleware
+router.post('/signup', checkDuplicateEmail,signup);
 
 
 //  sign-in route
