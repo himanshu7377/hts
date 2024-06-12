@@ -76,3 +76,11 @@ exports.signin = async(req,res)=>{
         res.status(500).send(' Error :' + error.message);
     }
 }
+
+
+
+//  test route for protected routes
+
+exports.test = (req, res) => {
+    res.send('Protected route');
+}
