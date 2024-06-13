@@ -11,6 +11,8 @@ exports.signup = async(req,res)=>{
     //  take firstName, lastName, email and password from req.body
     const {firstName, lastName, email, password} = req.body;
 
+    
+
     try {
         //  hash the password before saving
         const  hashedPassword = await bcrypt.hash(password, 10);
